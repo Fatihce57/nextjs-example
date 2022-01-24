@@ -1,15 +1,19 @@
+import Link from 'next/link'
+
 export default function Popular({ movies }) {
     return (
         <div className="popular">
             <h2>Popular Movies</h2>
             <div className="popular-inner">
                 {movies.results.map((movie) => (
-                    <div key={movie.id}>
+                    <Link key={movie.id} href={`/film/${movie.id}`}>
+                        <a>
                         <h3>{movie.title}</h3>
                         <img
                             src={`https://www.themoviedb.org/t/p/w300_and_h450_bestv2${movie.poster_path}`}
                         />
-                    </div>
+                        </a>
+                    </Link>
                 ))}
             </div>
             <style jsx>{`
@@ -30,7 +34,7 @@ export default function Popular({ movies }) {
           gap: 10px;
         }
 
-        div {
+        a {
           width: calc(25%-10px);
           position: relative;
         }
