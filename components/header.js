@@ -17,18 +17,19 @@ export default function Header() {
         </nav>
         <style jsx>{`
         .header{            
-            background:red;
-            border-bottom: 1px solid blue;           
+            background:rgb(208, 208, 216);
+            border-bottom: 1px solid blue;
+            padding:10px;           
         }
         ul{
-            display:flex;                      
+            display:flex;                    
         }
         a{
-            height:60px;
             align-items: center;
             text-decoration:none;
             padding:0 20px;
             color:black;
+            
         }
         `}</style>
     </header>
